@@ -1,0 +1,137 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+html{
+    background-color: rgb(65, 65, 65);
+}
+
+@keyframes fluid{
+    0%{
+        color: white;
+    }
+    50%{
+        color: rgb(157, 230, 255);
+        text-shadow: 0 0 0.5rem rgb(157, 230, 255);
+    }
+    100%{
+        color: white;
+    }
+}
+
+@keyframes scroll-anim{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes HLtext{
+    0%{
+        color: rgb(78, 228, 255);
+    }
+    50%{
+        color: rgb(157, 230, 255);
+    }
+    100%{
+        color: rgb(78, 228, 255);
+    }
+}
+
+      body {
+        animation: fadeIn 1s;
+
+        margin: 0;
+        color: #d9f9ff;
+        font-family: 'Proxima Nova', sans-serif;
+      }
+      a{
+      	color:darkblue;
+        
+      }
+      h1 {
+        animation: fluid 3s;
+        animation-iteration-count: infinite;
+      	font-weight: 400;
+        font-size: 160px;
+      }
+      h2 {
+        animation: fluid 3s;
+        animation-iteration-count: infinite;
+        font-size: 120px;
+        font-weight: 400;
+      }
+      h3 {
+        font-size: 100px;
+        font-weight: 300;
+      }
+      p {
+      	font-size: 70px; 
+        font-weight: 1;
+      }
+			
+      .project:hover{
+      		color: gray;
+      }
+      
+      #top {
+        background: url(https://wallpaperaccess.com/full/17520.jpg) no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+      }
+
+      #top-content {
+        padding-top: 30vh;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+      }
+      
+      #content{
+        margin: 10;
+        text-align: center;
+      }
+
+      .section{
+        animation: sideborders 5s;
+        animation-iteration-count: infinite;
+
+        height: 76vh;
+        border-bottom: solid 10px lightblue;
+      }
+
+      .text-container{
+        width: 80vw;
+        float: left;
+        margin-left: 10vw;
+      }
+
+      a{
+        color: lightblue;
+        text-decoration: none;
+      }
+
+      a:hover{
+        color: rgb(132, 226, 255);
+      }
+
+      .scroll-animate{
+        animation: scroll-anim ease 1s;
+      }
+
+      .highlight{
+        animation: HLtext 3s;
+        animation-iteration-count: infinite;
+      }
