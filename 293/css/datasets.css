@@ -130,8 +130,8 @@
   }
   .edit-btn{
     display: inline-flex;
-    width: 7vw;
-    height: 7vw;
+    width: var(--tree-text-size);
+    height: var(--tree-text-size);
     font-size: 6vw;
     outline: none;
   }
@@ -310,8 +310,8 @@
     }
     .edit-btn{
       display: inline-flex;
-      width: 1.5vw;
-      height: 1.5vw;
+      width: var(--tree-text-size-desktop);
+      height: var(--tree-text-size-desktop);
       font-size: 1vw;
     }
     .add-btn:hover, .edit-btn:hover{
