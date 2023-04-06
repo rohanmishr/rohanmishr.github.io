@@ -3,6 +3,8 @@
     --gui-bg-color: rgb(50, 50, 50);
     --text-color: white;
     --header-border-color: white;
+    --tree-text-size: 3vw;
+    --tree-text-size-desktop: 2vw;
 }
 
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
@@ -68,6 +70,7 @@ header{
 }
 button{
     display: inline;
+    outline: none;
 }
 button:hover{
     cursor: pointer;

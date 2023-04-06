@@ -65,6 +65,10 @@ function renderTree(DATASET, init = true) {
 		for (var j = 0; j < DATASET.fields().length ?? 0; j++) {
 			var field = DATASET.fields()[j];
 			fields += `<li><span class="caret">${field ?? ""}</span>
+				<button class="edit-btn" onclick='
+					findDatasetByName("${DATASET.name}").replaceField("${team}", "${field}"),
+					renderTree(findDatasetByName("${DATASET.name}", false))'
+				>&#9998;</button>
                 <ul class="nested ${expanded.get(team) === "true" ? "active" : ""}">
                     ${DATASET.getVal(team, field) ?? "No data"}
                     <button class="edit-btn" onclick='

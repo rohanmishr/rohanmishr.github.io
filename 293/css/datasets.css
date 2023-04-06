@@ -82,13 +82,13 @@
   /* Remove default bullets */
   ul, #myUL {
       list-style-type: none;
-      font-size: 4vw;
+      font-size: var(--tree-text-size);
   }
     
   #myUL {
     margin: 0;
     padding: 0;
-    font-size: 4vw;
+    font-size: var(--tree-text-size);
   }
     
   .caret {
@@ -240,7 +240,7 @@
     .view-btn{
       display: inline;
       height: 3vh;
-      width: 4vw;
+      width: 10vw;
       border-radius: 0.5vw;
     }
     table{
@@ -265,7 +265,7 @@
     /* Remove default bullets */
     ul, #myUL {
         list-style-type: none;
-        font-size: 1vw;
+        font-size: var(--tree-text-size-desktop);
     }
       
     #myUL {

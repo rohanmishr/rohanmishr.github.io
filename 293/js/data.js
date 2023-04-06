@@ -13,11 +13,8 @@ class Data{
     }
 
     async setVal(team, field, value){
-        if (this.data.has(team)) {
-            this.data.get(team).set(field, value);
-        } else {
-            throw new Error("Error parsing data: team not found"); // TODO: Fix this error
-        }
+        try{this.data.get(team).set(field, value)}
+        catch(e){return;}
     }
 
     getVal(team, field){
@@ -62,6 +59,15 @@ class Data{
     async addField(){
         var f = await Notifications.input("Field name:")
         this.setVal(this.teams()[0], f.toString(), "No data");
+        renderTree(this);
+    }
+
+    async replaceField(team, field){
+        var f = await Notifications.input("New field name:");
+        if(f == "" || f == null) return;
+        var p = this.getVal(team, field);
+        this.setVal(team, f, p);
+        this.data.get(team).delete(field);
         renderTree(this);
     }
 
