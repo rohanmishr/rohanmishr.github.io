@@ -121,7 +121,7 @@ function SwitchButtons(dataset) {
 	<button class="view-btn" onclick='switchView("view", "${dataset.name}")'>View</button>
     <button class="view-btn" onclick='switchView("add", "${dataset.name}")'>Add</button>
 	<button class="view-btn" onclick='switchView("export", "${dataset.name}")'>Export</button>
-	<button style="overflow: hidden" class="view-btn" onclick='switchView("analyze", "${dataset.name}")'>Analyze (WIP)</button>
+	<button style="overflow: hidden" class="view-btn" onclick='switchView("analyze", "${dataset.name}")'>Analyze</button>
     `;
 	$("#view-buttons")[0].innerHTML = html;
 
