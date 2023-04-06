@@ -30,6 +30,5 @@ function renderAnalyzers(DATASET){
             }
             draggingItem = null;
         }
-        item.classList.remove('dragging');
     });
 }

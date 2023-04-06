@@ -62,6 +62,11 @@ class Data{
         renderTree(this);
     }
 
+    addFieldManual(field){
+        this.setVal(this.teams()[0], field.toString(), "No data");
+        renderTree(this);
+    }
+
     async replaceField(team, field){
         var f = await Notifications.input("New field name:");
         if(f == "" || f == null) return;

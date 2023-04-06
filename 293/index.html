@@ -2,7 +2,8 @@
 <head>
   <title>SpikeScout</title>
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/datasets.css">
   <link rel="stylesheet" href="css/analyze.css">
@@ -63,6 +64,7 @@
     <header>
       <img id="page-icon" src="assets/spike.png">
       <h1 id="page-title">SpikeScout</h1>
+      <input type="file" id="file">
     </header>
     <div id="presetData">
       <h2>Preset data</h2>
@@ -73,6 +75,7 @@
       <h2>Datasets</h2>
       <div class="dataset" onclick="createNewDataset()">
         <h3>New set</h3>
+
       </div>
     </div>
     <ul id="teamData"></ul>

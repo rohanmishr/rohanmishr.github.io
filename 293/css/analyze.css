@@ -47,9 +47,16 @@
     user-select: none;
     transition: transform 0.2s ease-in-out;
 }
+@keyframes blue-border-select{
+    0%{
+        border: 1px solid rgb(0, 0, 255);
+    }
+    100%{
+        border: 1px solid rgb(255, 255, 255);
+    }
+}
 .analyzer-team.dragging {
-    opacity: 0.5;
-    transform: scale(1.1);
+    animation: blue-border-select 1s;
 }
 .analyzer-team:active{
     cursor: grabbing;
@@ -58,5 +65,5 @@
     margin-left: 1vw;
 }
 .analyzer-team:hover{
-    background-color: #808080;
+    background-color: rgba(255, 255, 255, 0.1);
 }
