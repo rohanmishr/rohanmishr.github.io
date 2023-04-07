@@ -39,7 +39,7 @@ function playSound(s){
         console.log(audio);
         audio.play();
         break;
-    case "Touchpad":
+    case "Touchbar":
         var audio = new Audio("audio/IMG_2283.mp3");
         audio.play();
         break;
