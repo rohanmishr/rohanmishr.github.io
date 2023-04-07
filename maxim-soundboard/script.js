@@ -20,7 +20,9 @@ function playSound(s){
         audio.play();
         break;
     case "Chek":
-      
+        var audio = new Audio("audio/IMG_2277.mp3");
+        console.log(audio);
+        audio.play();
         break;
     case "Noooooo":
         var audio = new Audio("audio/Noooooo.mp3");
