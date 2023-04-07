@@ -41,6 +41,7 @@ function playSound(s){
         break;
     case "Touchbar":
         var audio = new Audio("audio/IMG_2283.mp3");
+        console.log(audio);
         audio.play();
         break;
     default:
