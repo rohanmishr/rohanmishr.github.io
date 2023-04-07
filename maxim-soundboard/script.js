@@ -42,6 +42,7 @@ function playSound(s){
     case "Touchpad":
         var audio = new Audio("audio/IMG_2283.mp3");
         audio.play();
+        break;
     default:
         break;
   }
