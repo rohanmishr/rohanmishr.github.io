@@ -47,16 +47,16 @@
     user-select: none;
     transition: transform 0.2s ease-in-out;
 }
-@keyframes blue-border-select{
+@keyframes gold-border-select{
     0%{
-        border: 1px solid rgb(0, 0, 255);
+        border: 1px solid rgb(253, 238, 101);
     }
     100%{
         border: 1px solid rgb(255, 255, 255);
     }
 }
 .analyzer-team.dragging {
-    animation: blue-border-select 1s;
+    animation: gold-border-select 1s;
 }
 .analyzer-team:active{
     cursor: grabbing;
@@ -66,4 +66,31 @@
 }
 .analyzer-team:hover{
     background-color: rgba(255, 255, 255, 0.1);
+}
+.analyze-manual-buttons-container{
+    float: right;
+    width: 5vw;
+    margin-left: auto;
+    height: 8vh;
+}
+.downbtn{
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin-right: 3px;
+}
+.upbtn{
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    background-color: transparent;
+    border: none;
+    float: right;
 }
