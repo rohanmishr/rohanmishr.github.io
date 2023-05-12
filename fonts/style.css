@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Noize-Sport";
+    src: url("fonts/NoizeSportFreeVertion-Regular.ttf");
+}
+
+#result{
+    font-family: "Noize-Sport", monospace;
+    font-size: 100;
+}
