@@ -30,9 +30,7 @@ function toggleView(){
     }
 }
 
-function changeColor(el){
-    /*if (mode === 0){
-        var color = window.prompt("enter color");
-        el.style.color = color;
-    }*/
+function changeFont(file){
+    alert("Work in progress");
 }
+

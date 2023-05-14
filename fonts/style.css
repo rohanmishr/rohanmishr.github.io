@@ -1,10 +1,14 @@
 @font-face {
-    font-family: "Noize-Sport";
+    font-family: "imported-font";
     src: url("fonts/NoizeSportFreeVertion-Regular.ttf");
 }
 
+body {
+    font-family: sans-serif;
+}
+
 #result{
-    font-family: "Noize-Sport", monospace;
+    font-family: "imported-font", monospace;
     font-size: 100;
 }
 
@@ -12,6 +16,8 @@
     display: inline-block;
     border: 1px solid rgb(189, 189, 189);
     transition: 0.2s ease;
+    text-align: center;
+    padding: 1vh;
 }
 
 .char:hover {
@@ -19,6 +25,5 @@
 }
 
 .color-input {
-    position: relative;
     display: block;
 }
