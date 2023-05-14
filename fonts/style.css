@@ -7,3 +7,18 @@
     font-family: "Noize-Sport", monospace;
     font-size: 100;
 }
+
+.char {
+    display: inline-block;
+    border: 1px solid rgb(189, 189, 189);
+    transition: 0.2s ease;
+}
+
+.char:hover {
+    border: 1px solid black;
+}
+
+.color-input {
+    position: relative;
+    display: block;
+}
