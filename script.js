@@ -34,10 +34,6 @@ loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
     } );
     const material = new THREE.MeshBasicMaterial( { 
         color: 0x7aceff,
-        roughness: 0.5, // Adjust the roughness for better shadow appearance
-        metalness: 0.5,
-        shadowSide: THREE.DoubleSide, // Enable both sides of the text to receive shadows
-        side: THREE.FrontSide // Show only the front side of the text 
     } );
     mesh = new THREE.Mesh( g, material );
     mesh.position.x -= 140;
