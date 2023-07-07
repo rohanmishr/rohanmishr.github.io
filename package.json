@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/rohanmishr/rohanmishr.github.io#readme",
   "dependencies": {
-    "three": "^0.154.0"
+    
   },
   "devDependencies": {
     "vite": "^4.4.2"

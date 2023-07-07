@@ -1,12 +1,7 @@
-/*import * as THREE from 'three';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';*/
 import * as THREE from 'https://unpkg.com/three@0.150.0/build/three.module.js';
 import { FontLoader } from 'https://unpkg.com/three@0.150.0/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'https://unpkg.com/three@0.150.0/examples/jsm/geometries/TextGeometry.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.150.0/examples/jsm/controls/OrbitControls.js';
-
 
 console.log("script loaded");
 
