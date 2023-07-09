@@ -26,6 +26,10 @@
 }
 
 /* base elements */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     color: white;
@@ -95,11 +99,50 @@ body {
     opacity: 0.05;
     border: none;
     transition: 0.5s ease;
-    margin-top: -1vh;
+    margin-top: -2vh;
     filter: blur(0.25rem);
 }
 
 #main-down:hover {
     opacity: 1;
     filter: blur(0);
+}
+
+.pages-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.page {
+    height: 100vh;
+    margin-top: 2vh;
+    width: 98vw;
+    display: block;
+}
+
+#pg1-left {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 49.5%;
+    height: 100%;
+    > h1 {
+        font-family: "BlinkMacSystemFont", "San Francisco";
+        font-weight: 400;
+        font-size: 7rem;
+    }
+
+    > p {
+        font-size: 4rem;
+    }
+}
+#pg1-right {
+    float: right;
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }

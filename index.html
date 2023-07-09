@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>rohanmishra ⋅ home</title>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
     <script type="importmap">
@@ -27,14 +28,27 @@
     <div id="threejs-target"></div>
 
     <div id="main">
-      <button id="main-down">&dArr;</button>
-      <h1>page coming soon...</h1>
-      <h3>Check back later!</h3>
+      <button id="main-down" onclick="scrollNext()">&dArr;</button>
+      <div id="pages-container">
+        <div class="page" id="pg1">
+          <div id="pg1-left">
+            <h1>Hi, im Rohan</h1>
+            <p>Junior developer, mainly HTML/CSS/JS but also dabbling in several other fields of development</p>
+          </div>
+          <div id="pg1-right">
+            <div id="pg1-threejs-target"></div>
+          </div>
+        </div>
+        <h1>page coming soon...</h1>
+        <h3>Check back later!</h3>
+      </div>
     </div>
 
     <div id="footer">
     
     </div>
   </body>
-  <script type="module" src="script.js"></script>
+  <script type="module" src="scripts/threejs-title.js"></script>
+  <script type="module" src="scripts/threejs-pg1.js"></script>
+  <script src="scripts/script.js"></script>
 </html>
