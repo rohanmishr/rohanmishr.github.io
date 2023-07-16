@@ -12,10 +12,15 @@ camera.position.z = 200;
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.domElement.style = "border: 1px solid lime; width: 49%; height: 50%;";
+renderer.domElement.style = "border: 1px solid lime; width: 100%; height: 50%;";
 document.getElementById("pg1-threejs-target").appendChild( renderer.domElement );
 
 var controls = new OrbitControls( camera, renderer.domElement );
+
+const material = new THREE.MeshBasicMaterial( { color: 0x7aceff });
+const geometry = new THREE.BoxGeometry();
+const mesh = new THREE.Mesh( geometry, material );
+scene.add(mesh);
 
 function animate() {
 	requestAnimationFrame( animate );

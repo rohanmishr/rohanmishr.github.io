@@ -5,6 +5,7 @@ import { FontLoader } from '../altered-threejs/FontLoader.js';
 import { TextGeometry } from '../altered-threejs/TextGeometry.js';
 //import { OrbitControls } from 'https://unpkg.com/three@0.150.0/examples/jsm/controls/OrbitControls.js';
 import { OrbitControls } from '../altered-threejs/OrbitControls.js';
+import Color3 from '../classes/Color3.js';
 
 console.log("script loaded");
 
@@ -53,6 +54,64 @@ function animate() {
 	renderer.render( scene, camera );
 }
 
+//COLORS --------------------------------------------------------------------------------------------------------------
+
+function* rainbowColGen() {
+    let hue = 30; 
+    const hueIncrement = 0.5; 
+
+    while (true) {
+        yield hslToRgb(hue, 100, 50);
+        hue = (hue + hueIncrement) % 360; 
+    }
+}
+
+function* bluePulseColGen() {
+    const baseHue = 270; // purple
+    const saturationMin = 0; // gray
+    const saturationMax = 110; // purple
+    const saturationIncrement = 0.5;
+
+    let saturation = saturationMin;
+    let increasing = true;
+
+    while (true) {
+        const color = hslToRgb(baseHue, saturation, 50);
+        yield color;
+
+        if (increasing) {
+            saturation += saturationIncrement;
+            if (saturation >= saturationMax) {
+                increasing = false;
+            }
+        } else {
+            saturation -= saturationIncrement;
+            if (saturation <= saturationMin) {
+                increasing = true;
+            }
+        }
+    }
+}  
+
+function hslToRgb(h, s, l) {
+    h %= 360;
+    const hslString = `hsl(${h},${s}%,${l}%)`;
+    const tempElement = document.createElement("div");
+    tempElement.style.backgroundColor = hslString;
+    return tempElement.style.backgroundColor;
+}
+
+var GEN_MODE = 0;
+var gen = rainbowColGen();
+
+function slowAnimate() {
+    var col = gen.next().value;
+    mesh.material.color = new THREE.Color(col);
+}
+
+var TICK_RATE = 10;
+setInterval(slowAnimate, TICK_RATE);
+
 document.addEventListener("mousemove", (e) => {
     var mouse = new THREE.Vector2();
     mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
@@ -69,25 +128,14 @@ document.addEventListener("mousemove", (e) => {
     }
 });
 
-var hexCols = [
-    "0xff7de9",
-    "0x7aceff",
-    "0x7affa5",
-    "0xffe97d",
-    "0xff7d7d"
-];
-
-function getRandomHexCol() {
-    var c = Math.floor(Math.random() * hexCols.length);
-    if(c == mesh.material.color.getHex()) {
-        return getRandomHexCol();
-    } else {
-        return c;
-    }
-}
 document.addEventListener("click", (e) => {
     if($("html,body").css("cursor") == "pointer") {
-        mesh.material.color.setHex(hexCols[getRandomHexCol()]);
+        GEN_MODE++;
+        if(GEN_MODE == 2) { GEN_MODE = 0; }
+
+        //switch generator
+        if(GEN_MODE === 0) { gen = rainbowColGen(); TICK_RATE = 10; }
+        if(GEN_MODE === 1) { gen = bluePulseColGen(); TICK_RATE = 50; }
     }
 });
 
