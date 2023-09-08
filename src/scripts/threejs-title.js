@@ -66,7 +66,7 @@ function* rainbowColGen() {
     }
 }
 
-function* bluePulseColGen() {
+function* purplePulseColGen() {
     const baseHue = 270; // purple
     const saturationMin = 0; // gray
     const saturationMax = 110; // purple
@@ -91,7 +91,33 @@ function* bluePulseColGen() {
             }
         }
     }
-}  
+}
+
+function* fireColGen() {
+    const minHue = 29;
+    const maxHue = 60;
+    const hueIncrement = 0.5;
+    
+    let hue = minHue;
+    let increasing = true;
+
+    while (true) {
+        const color = hslToRgb(hue, 100, 50);
+        yield color;
+
+        if (increasing) {
+            hue += hueIncrement;
+            if (hue >= maxHue) {
+                increasing = false;
+            }
+        } else {
+            hue -= hueIncrement;
+            if (hue <= minHue) {
+                increasing = true;
+            }
+        }
+    }
+}
 
 function hslToRgb(h, s, l) {
     h %= 360;
@@ -131,11 +157,12 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("click", (e) => {
     if($("html,body").css("cursor") == "pointer") {
         GEN_MODE++;
-        if(GEN_MODE == 2) { GEN_MODE = 0; }
+        if(GEN_MODE == 3) { GEN_MODE = 0; }
 
         //switch generator
         if(GEN_MODE === 0) { gen = rainbowColGen(); TICK_RATE = 10; }
-        if(GEN_MODE === 1) { gen = bluePulseColGen(); TICK_RATE = 50; }
+        if(GEN_MODE === 1) { gen = purplePulseColGen(); TICK_RATE = 50; }
+        if(GEN_MODE === 2) { gen = fireColGen(); TICK_RATE = 30; }
     }
 });
 
