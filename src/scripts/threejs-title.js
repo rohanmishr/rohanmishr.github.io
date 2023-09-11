@@ -57,7 +57,7 @@ function animate() {
 //COLORS --------------------------------------------------------------------------------------------------------------
 
 function* rainbowColGen() {
-    let hue = 30; 
+    let hue = 20; 
     const hueIncrement = 0.5; 
 
     while (true) {
@@ -119,6 +119,13 @@ function* fireColGen() {
     }
 }
 
+function* randomColGen() {
+    while (true) {
+        const color = hslToRgb(Math.random() * 360, 100, 50);
+        yield color;
+    }
+}
+
 function hslToRgb(h, s, l) {
     h %= 360;
     const hslString = `hsl(${h},${s}%,${l}%)`;
@@ -136,7 +143,7 @@ function slowAnimate() {
 }
 
 var TICK_RATE = 10;
-setInterval(slowAnimate, TICK_RATE);
+var interval = setInterval(slowAnimate, TICK_RATE);
 
 document.addEventListener("mousemove", (e) => {
     var mouse = new THREE.Vector2();
@@ -157,12 +164,16 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("click", (e) => {
     if($("html,body").css("cursor") == "pointer") {
         GEN_MODE++;
-        if(GEN_MODE == 3) { GEN_MODE = 0; }
+        if(GEN_MODE == 4) { GEN_MODE = 0; }
 
         //switch generator
         if(GEN_MODE === 0) { gen = rainbowColGen(); TICK_RATE = 10; }
-        if(GEN_MODE === 1) { gen = purplePulseColGen(); TICK_RATE = 50; }
-        if(GEN_MODE === 2) { gen = fireColGen(); TICK_RATE = 30; }
+        if(GEN_MODE === 1) { gen = purplePulseColGen(); TICK_RATE = 10; }
+        if(GEN_MODE === 2) { gen = fireColGen(); TICK_RATE = 50; }
+        if(GEN_MODE === 3) { gen = randomColGen(); TICK_RATE = 500; }
+
+        clearInterval(interval);
+        interval = setInterval(slowAnimate, TICK_RATE);
     }
 });
 
