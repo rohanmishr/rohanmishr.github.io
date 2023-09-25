@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="stylesheets/style.css" />
+        <title>WToA Tool</title>
+    </head>
+    <body>
+        <header>
+            <h4 id="status"></h4>
+        </header>
+        <div id="body-inner">
+            <input type="text" id="username" placeholder="Enter your username..." /><button style="margin-left: 1em; height: 3.5em; width: 7.5em;"onclick="INIT()">Go!</button>
+            <div id="filters">
+        
+            </div>
+            <div id="themes">
+                <button onclick="setTheme('light')">Light</button>
+                <button onclick="setTheme('dark')">Dark</button>
+            </div>
+            <p>(rarely this will find the wrong user)</p>
+
+
+            <div id="main">
+                <div id="main-content">
+                    <div id="main-content-depths">
+                        
+                    </div>
+                    <div id="main-content-subrealms">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app/wtoadata.js"></script>
+        <script src="app/script.js"></script>
+        <script src="app/util.js"></script>
+        <script src="app/render.js"></script>
+    </body>
+</html>

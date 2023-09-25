@@ -1,0 +1,222 @@
+:root {
+    --font: 'Roboto', sans-serif;
+
+    /* regular (dark) theme */
+    --bg-color: rgb(20, 20, 20);
+    --accent-color: rgb(40, 40, 40);
+    --font-color: white;
+    --uncompleted-color: gray;
+
+    /* diff hex cols */
+    --easy: #00a808;
+    --medium: #fcdb03;
+    --hard: #fc8803;
+    --difficult: #fc0303;
+    --challenging: #570000;
+    --intense: #121212;
+    --remorseless: #ea00ff;
+    --insane: #0011ff;
+    --extreme: #0051ff;
+    --terrifying: #00fffb;
+    --catastrophic: #ffffff;
+    --horrific: #f1abff;
+}
+
+html {
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+#main {
+    margin-top: 5px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#filters {
+    display: inline;
+    > select {
+        margin-left: 33.5vw;
+        width: 7vw;
+        height: 3.5em;
+        border-radius: 1em;
+        font-size: 1em;
+        padding-left: 1em;
+    }
+}
+
+#themes {
+    display: inline;
+    float: right;
+}
+
+#body-inner {
+    padding-left: 1em;
+}
+
+header {
+    background-color: black;
+    padding-left: 0.1em;
+}
+
+button {
+    background-color: var(--accent-color);
+    border: 1px solid var(--font-color);
+    border-radius: 0.5vw;
+    color: var(--font-color);
+}
+
+input {
+    font-family: var(--font);
+    font-size: 1em;
+    width: 20em;
+    height: 3.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: var(--font-color);
+    background-color: var(--accent-color);
+    border: 1px solid var(--font-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+.depth, .subrealm {
+    width: 20vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > h2 {
+        font-size: 1.5em;
+        border-radius: 0.5em;
+        border: 1px solid var(--font-color);
+        width: 8vw;
+        text-align: center;
+        padding: 0.25em;
+    }
+    > .depth-towers, .subrealm-towers {
+        > .depth-tower, .subrealm-tower {
+            white-space: nowrap;
+            text-overflow: ellipsis "...";
+            display: flex;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 0.2em;
+            width: 18vw;
+            padding-left: 0.2em;
+            height: 2em;
+            justify-content: left;
+            align-items: center;
+            background-color: var(--uncompleted-color);
+
+            > .text-layer1 { 
+                display: block;
+                color: black;
+            }
+            > .text-layer2 {
+                display: none;
+                color: black;
+            }
+        }
+
+        > .depth-tower:hover .text-layer1, .subrealm-tower:hover .text-layer1 {
+            display: none;
+        }
+        > .depth-tower:hover .text-layer2, .subrealm-tower:hover .text-layer2 {
+            display: block;
+        }
+        
+        /* yes i did it manually */
+        > .completed {
+            background-color: rgb(39, 255, 39);
+        }
+        > .completed.Easy {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--easy) 100%);
+        }
+        > .completed.Medium {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--medium) 100%);
+        }
+        > .completed.Hard {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--hard) 100%);
+        }
+        > .completed.Difficult {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--difficult) 100%);
+        }
+        > .completed.Challenging {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--challenging) 100%);
+        }
+        > .completed.Intense {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--intense) 100%);
+        }
+        > .completed.Remorseless {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--remorseless) 100%);
+        }
+        > .completed.Insane {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--insane) 100%);
+        }
+        > .completed.Extreme {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--extreme) 100%);
+        }
+        > .completed.Terrifying {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--terrifying) 100%);
+        }
+        > .completed.Catastrophic {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--catastrophic) 100%);
+        }
+        > .completed.Horrific {
+            background-image: linear-gradient(90deg, rgb(39, 255, 39) 65%, var(--horrific) 100%);
+        }
+
+        /* uncompleted */
+        > .Easy {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--easy) 100%);
+        }
+        > .Medium {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--medium) 100%);
+        }
+        > .Hard {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--hard) 100%);
+        }
+        > .Difficult {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--difficult) 100%);
+        }
+        > .Challenging {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--challenging) 100%);
+        }
+        > .Intense {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--intense) 100%);
+        }
+        > .Remorseless {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--remorseless) 100%);
+        }
+        > .Insane {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--insane) 100%);
+        }
+        > .Extreme {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--extreme) 100%);
+        }
+        > .Terrifying {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--terrifying) 100%);
+        }
+        > .Catastrophic {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--catastrophic) 100%);
+        }
+        > .Horrific {
+            background-image: linear-gradient(90deg, var(--uncompleted-color) 65%, var(--horrific) 100%);
+        }
+    }
+}
+
+#main-content-depths {
+    float: left;
+    border-right: 1px solid gray;
+}
+
+#main-content-subrealms {
+    float: left;
+}
