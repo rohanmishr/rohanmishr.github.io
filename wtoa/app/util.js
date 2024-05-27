@@ -77,10 +77,12 @@ function setTheme(theme) {
         document.documentElement.style.setProperty('--accent-color', "rgb(40, 40, 40)");
         document.documentElement.style.setProperty('--font-color', "white");
         document.documentElement.style.setProperty('--uncompleted-color', "gray");
+        document.documentElement.style.setProperty('--select-text-color', "white");
     } else if(theme == "light") {
         document.documentElement.style.setProperty('--bg-color', "rgb(240, 240, 240)");
         document.documentElement.style.setProperty('--accent-color', "rgb(220, 220, 220)");
         document.documentElement.style.setProperty('--font-color', "black");
-        document.documentElement.style.setProperty('--uncompleted-color', "gray");
+        document.documentElement.style.setProperty('--uncompleted-color', "lightgray");
+        document.documentElement.style.setProperty('--select-text-color', "black");
     }
 }
