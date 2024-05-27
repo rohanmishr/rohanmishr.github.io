@@ -37,7 +37,7 @@ const badges = [
     {id: 2125043424, name: "ToSO", fname: "Tower of Scattered Obstacles", diff: 6.72},
     {id: 2125043539, name: "ToI", fname: "Tower of Insanity", diff: 7.37},
     {id: 2125043548, name: "ToIT", fname: "Tower of Inconsistent Theming", diff: 7.43},
-    {id: 2125043568, name: "ToIaI", fname: "Tower of Incomprehension and Imperfection", diff: 7.99},
+    {id: 2125043568, name: "ToIaI", fname: "Tower of Continuous Torment", diff: 7.99},
     {id: 2127000415, name: "ToDB", fname: "Tower of Difficulty Breezing", diff: 8.43},
     {id: 2125043557, name: "CoEaCT", fname: "Citadel of Endless and Chaotic Treachery", diff: 6.51},
     //depth 3 (DONE)
@@ -53,14 +53,32 @@ const badges = [
     {id: 2125043533, name: "ToEL", fname: "Tower of Expanding Layers", diff: 6.94},
     {id: 2126979382, name: "ToVS", fname: "Tower of Valiant Scaling", diff: 7.09},
     {id: 2126979393, name: "ToSC", fname: "Tower of Short Cruelty", diff: 7.37},
-    {id: 2128776398, name: "ToOA", fname: "Tower of Oblique Annoyances", diff: 8.34},
-    {id: 2127000418, name: "CoLF", fname: "Citadel of Looping Failure", diff: 7.98}
+    {id: 2128776398, name: "ToOA", fname: "Tower of Oblique Annoyances", diff: 8.04},
+    {id: 2127000418, name: "CoLF", fname: "Citadel of Looping Failure", diff: 7.99},
+    // depth 4
+    {id: 2128776414, name: "ToFS", fname: "Tower of Four Sections", diff: 1.85},
+    {id: 2128776440, name: "ToSN", fname: "Tower of Safety Nets", diff: 2.02},
+    {id: 2128776486, name: "ToSM", fname: "Tower of Simple Mechanisms", diff: 2.24},
+    {id: 2128776563, name: "ToPD", fname: "Tower of Peaceful Dreams", diff: 2.71},
+    {id: 2128791078, name: "ToBF", fname: "Tower of Blissful Flow", diff: 3.39},
+    {id: 2128791096, name: "ToZG", fname: "Tower of Zingy Gaming", diff: 3.76},
+    {id: 2128791109, name: "ToLOW", fname: "Tower of Length Over Width", diff: 4.17},
+    {id: 2128791138, name: "ToBM", fname: "Tower of Blistering Malice", diff: 4.53},
+    {id: 2128791158, name: "ToML", fname: "Tower of Momentary Leaping", diff: 4.92},
+    {id: 2128813748, name: "ToARR", fname: "Tower of Adequately Revolutionary Rotation", diff: 5.19},
+    {id: 2128813752, name: "ToSR", fname: "Tower of Stereotypical Reluctance", diff: 5.64},
+    {id: 2128813766, name: "ToIP", fname: "Tower of Immense Pole", diff: 6.11},
+    {id: 2128813769, name: "ToEI", fname: "Tower of Extreme Ire", diff: 6.78},
+    {id: 2128813771, name: "ToOC", fname: "Tower of Obdurate Conception", diff: 9.51},
+    {id: 2128830572, name: "ToUM", fname: "Tower of Umrah Market", diff: 10.35},
+    {id: 2128862419, name: "CoO", fname: "Citadel of Opprobrium", diff: 5.73},
 ];
 
 const depths = [
     {name: "Depth 1", req: 0, towers: [2124678042, 2124684994, 2124681954, 2124678046, 2124687766, 2124685563, 2124918609, 2124687572, 2124693933, 2124696570, 2124705869, 2124706258, 2124713067]},
     {name: "Depth 2", req: 4, towers: [2125043368, 2125043380, 2125043386, 2125043394, 2125043405, 2125043415, 2125043424, 2125043427, 2125043548, 2125043568, 2125043539, 2127000415, 2125043557]},
-    {name: "Depth 3", req: 9, towers: [2126964536, 2126964538, 2126964540, 2126964545, 2126964551, 2126964556, 2126979292, 2126979329, 2126979350, 2125043533, 2126979382, 2126979393, 2128776398, 2127000418]}
+    {name: "Depth 3", req: 9, towers: [2126964536, 2126964538, 2126964540, 2126964545, 2126964551, 2126964556, 2126979292, 2126979329, 2126979350, 2125043533, 2126979382, 2126979393, 2128776398, 2127000418]},
+    {name: "Depth 4", req: 14, towers: [2128776414, 2128776440, 2128776486, 2128776563, 2128791078, 2128791096, 2128791109, 2128791138, 2128791158, 2128813748, 2128813752, 2128813766, 2128813769, 2128813771, 2128830572, 2128862419]}
 ];
 
 const subrealms = [
