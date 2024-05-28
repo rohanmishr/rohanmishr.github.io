@@ -57,7 +57,7 @@ const badges = [
     {id: 2127000418, name: "CoLF", fname: "Citadel of Looping Failure", diff: 7.99},
     // depth 4
     {id: 2128776414, name: "ToFS", fname: "Tower of Four Sections", diff: 1.85},
-    {id: 2128776440, name: "ToSN", fname: "Tower of Safety Nets", diff: 2.02},
+    {id: 2128776440, name: "ToSN", fname: "Tower of Safety Nets", diff: 1.52},
     {id: 2128776486, name: "ToSM", fname: "Tower of Simple Mechanisms", diff: 2.24},
     {id: 2128776563, name: "ToPD", fname: "Tower of Peaceful Dreams", diff: 2.71},
     {id: 2128791078, name: "ToBF", fname: "Tower of Blissful Flow", diff: 3.39},
